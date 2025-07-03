@@ -1,4 +1,4 @@
 FROM camunda/camunda-bpm-platform:run-latest
 
-# Optional: copy BPMN files if you have them
-# COPY ./bpmn /camunda/configuration/resources/
+# Overwrite the default web.xml
+COPY config/web.xml /camunda/webapps/engine-rest/WEB-INF/web.xml
